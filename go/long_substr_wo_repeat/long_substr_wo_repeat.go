@@ -13,16 +13,10 @@ func lengthOfLongestSubstring(s string) int {
 			if idx >= startIdx {
 				startIdx = max(startIdx+1, idx+1)
 			}
-			fmt.Println(startIdx)
-			fmt.Println(string(s[startIdx]))
 		}
 		chars[s[i]] = i
 
 	}
-	fmt.Println("------------")
-	fmt.Println(len(s))
-	fmt.Println(startIdx)
-	fmt.Println(string(s[startIdx]))
 	size = max(size, len(s)-startIdx)
 
 	return size
