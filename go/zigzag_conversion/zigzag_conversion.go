@@ -23,6 +23,7 @@ func convert(s string, numRows int) string {
 		// fmt.Printf("%d, %d\n", currPos, offset)
 		currPos += 2*numRows - 2
 		if currLine > 0 && currLine < numRows-1 && offset < len(s) {
+			// 0 new2
 			i++
 			newStr.WriteByte(s[offset])
 			offset += 2*numRows - 2
@@ -33,7 +34,6 @@ func convert(s string, numRows int) string {
 }
 
 // 0,n-1
-// 0 new2
 
 func main() {
 	fmt.Println(-10 % 2)
