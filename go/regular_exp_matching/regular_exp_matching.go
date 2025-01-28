@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// simplest solution
+// we may add a dp on idxP, idxS to improve performance
 func isMatchReverse(s string, p string, wildcard bool) bool {
 	idxP := len(p) - 1
 	idxS := len(s) - 1
