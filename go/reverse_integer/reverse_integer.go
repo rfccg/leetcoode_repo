@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	// "math"
 )
 
@@ -11,6 +12,9 @@ func reverse(x int32) int32 {
 	overflowDetection := acc
 	for x != 0 {
 		overflowDetection = acc
+		if math.MaxInt32/10 > acc {
+			return 0
+		}
 		acc *= multiplier
 		digit := x % 10
 		acc += digit
